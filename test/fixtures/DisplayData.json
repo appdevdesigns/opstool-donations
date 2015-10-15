@@ -1,0 +1,15 @@
+{
+    "attributes": {
+        "donors_lastName"       :"String",
+        "donors_firstName"      :"String",
+        "donors_email"          :"Email",
+        "donors_cellPhone"      :"Phone",
+        "donors_type"           : ["?", "One Time", "monthly", "yearly"]
+    },
+    "viewData": {
+        "listItem": "<b>[donors_firstName] [donors_lastName]</b>",
+        "displayName":"[donors_firstName] [donors_lastName] ([donors_pledge])",
+        "fieldPhone":"donors_cellPhone",
+        "fieldEmail":"donors_email"
+    }
+}
