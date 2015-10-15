@@ -23,6 +23,8 @@ module.exports = {
   'get /*(^.*)' : 'opstool-donations/PluginController.profile'
 
   */
+ 
+  'get /opstool-donations/donor' : 'opstool-donations/DonorController.find'
 
 
 };
