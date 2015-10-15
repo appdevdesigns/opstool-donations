@@ -25,7 +25,8 @@ module.exports = {
   */
  
   'get /opstool-donations/donor' : 'opstool-donations/DonorController.find',
-  'get /opstool-donations/donor/describe' : 'opstool-donations/DonorController.describe'
+  'get /opstool-donations/donor/describe' : 'opstool-donations/DonorController.describe',
+  'get /opstool-donations/donations' : 'opstool-donations/DonationsController.find'
 
 
 };
