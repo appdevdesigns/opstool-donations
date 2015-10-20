@@ -21,6 +21,14 @@ module.exports = {
 //        sync: serviceStack,
 //        logout:true
 //    }
+//    
+   'opstool-donations/DonorController':{
+   		describe:[],
+   		find:[]
+   },
+   'opstool-donations/DonationsController':{
+   		find:[]
+   }
 
 
 };
