@@ -15,16 +15,26 @@ module.exports = {
 
 
     find:function(req,res) {
-    	AD.sal.http({
-    		url:'http://localhost:1337/opstool-donations-stewardwise/donor',
-    		method:'GET'
-    	})
-    	.fail(function(err){
-    		res.serverError(err);
-    	})
-    	.then(function(data){
-    		res.send(data);
-    	})
+    	
+        var url = 'http://localhost:'+sails.config.port+'/opstool-donations-stewardwise/donor';
+        var method  = 'GET';
+
+        var config = MobileManager.config('opstool-donations');
+        url = config.url || url;
+        method = config.method || method;
+
+        AD.log('<green>donor: url:</green>'+url);
+
+        AD.sal.http({
+            url:url,
+            method:method
+        })
+        .fail(function(err){
+            res.serverError(err);
+        })
+        .then(function(data){
+            res.send(data);
+        })
     },
     
     describe:function(req, res) {
